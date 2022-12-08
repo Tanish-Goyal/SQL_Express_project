@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        a{
+            text-decoration: none;
+        }
+        form{
+            border:3px solid black;
+            width: 36rem;
+            height:36rem;
+
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/save" method="post">
+        <table>
+            <tr>
+                <td><label>Username*</label></td>
+                <td><input type="text" name="uname" placeholder="Enter username" minlength="2" maxlength="16" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Password*</label></td>
+                <td><input type="text" name="pass" placeholder="Enter password" minlength="8" maxlength="15" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required></td>
+            </tr>
+
+            <tr>
+                <td><label>First name*</label></td>
+                <td><input type="text" name="fname" placeholder="Enter your first name" minlength="2" maxlength="16" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender*</label></td>
+                <td><select name="gen" required>
+                        <option value="" disabled>Select your gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="others">Others</option>
+
+                </select></td>
+            </tr>
+
+            <tr>
+                <td>Phone Number*</td>
+                <td><input type="number" name="phno" placeholder="Enter your phone number" minlength="10" maxlength="10" required></td>
+            </tr>
+
+        </table>
+        <button ><a href="/login">Login In</a></button>
+        <button type="submit">Sign Up</a></button>
+
+
+    </form>
+    
+</body>
+</html>
